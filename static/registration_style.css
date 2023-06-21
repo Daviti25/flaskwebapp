@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,400&display=swap');
+    *{
+        font-family:'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(223, 222, 224);
+    }
+    .container{
+        position: relative;
+        max-width: 430px;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0);
+        border-radius: 10px;
+    }
+    .container .form{
+        padding: 30px;
+    }
+    .container .form .title{
+        position: relative;
+        font-size: 27px;
+        font-weight: 600;
+    }
+    .form .title::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 100px;
+        background-color: #9e9a9a;
+        border-radius: 25px;
+    }
+    .form .input-field{
+        margin-top: 30px;
+        background-color: red;
+        height: 50px;
+        width: 100% ;
+        position: relative;
+    
+    }
+    .input-field input{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 0 35px;
+        border-bottom: 2px solid #ccc;
+        border-top: 2px solid transparent;
+        font-size: 16px;
+    }
+    .input-field i{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #9999;
+        font-size: 23px ;
+    
+    }
+    .input-field i.icon{
+        left: 0;
+    
+    }
+    .input-field i.showHidePw{
+        right: 0;
+        
+    }
+    .form .checkbox-text{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    
+    }
+    .text{
+        margin-left: 20px;
+        color: #9999;
+    }
+    .checbox_agreee{
+        margin-left: 25px;
+    }
+    .link_privacy{
+        color: #5a5a5a99;
+        cursor: pointer;
+    }
+    
+    
+    button{
+        border-radius: 10px;
+        border: none;
+        margin-top: 40px;
+    }
+    .Signup{
+        border: none;
+        cursor: pointer;
+    }
+    .flashmsg{
+        color: #9999;
+        margin-top: 20px;
+    }

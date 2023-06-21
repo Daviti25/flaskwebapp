@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}
+ Profile
+{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='profile_style.css')}}">
+<section class="navbar">
+  <div class="navdiv">
+    <nav class="nav_nav">
+      <ul class="nav_list">
+        <li><p class="logo">Myapp</p></li>
+        <li><a href="{{url_for('home_page')}}">Home</a></li>
+        <li><a href="{{url_for('user')}}">Profile</a></li>
+        <li><a href="{{url_for('login_page')}}">Login</a></li>
+        <li><a href="{{url_for('sign_up')}}">Sign-up</a></li>
+        <li><a href="{{url_for('main_page')}}">Main</a></li>
+        <li><a><i class="uil uil-bars"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+<section class="user">
+  <div class="user_div">
+      <div class="img-button">
+          <div class="user-img">
+              <img src="static/18d1719179758dbf743a7cc9a3540b72.jpg">
+          </div>
+          <div class="button-div">
+              <a href="{{url_for('logout')}}"><button>Log out</button></a>
+          </div>
+      </div>
+  </div>
+</section>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}
+ Login
+{% endblock %}
+
+
+
+
+
+{% block content %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      setTimeout(function() {
+        $('.flashmsg').remove();
+      }, 4000); 
+    });
+  </script>
+<link rel="stylesheet" href="{{url_for('static', filename='login.css')}}">
+<div class="container">
+    <div class="forms" method="post">
+        <div class="form login">
+            <span class="title login">Login</span>
+
+            <form method="post">
+            <div class="input-field">
+                <input type="text" placeholder="Enter your email" name="email" required>
+                <i class="uil uil-envelope"></i>
+            </div>
+            <div class="input-field">
+                <input type="password" placeholder="Enter your password" name="password" required>
+                <i class="uil uil-lock icon"></i>
+                <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+            <div class="input-field">
+                <input type="submit" class="Signup"></input>
+            </div>
+            <div class="checkbox-text">
+                <div class="checkbox content">
+                    <label for="logCheck" class="text" ><a style=" color: #5a5a5a99;" href="{{url_for('sign_up')}}" cursor: pointer;">Don't have an account?</a></label>
+                </div>
+            </div>
+            {% with messages = get_flashed_messages()%}
+{% if messages %}
+    {% for msg in messages %}
+        <p class="flashmsg">{{msg}}</p>
+    {% endfor %}
+{% endif %}
+{% endwith %}
+
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

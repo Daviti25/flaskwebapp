@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}
+ Main
+{% endblock %}
+{% block content %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      setTimeout(function() {
+        $('.flashmsg').remove();
+      }, 5000); 
+    });
+  </script>
+<link rel="stylesheet" href="{{url_for('static', filename='login.css')}}">
+<div class="container">
+    <div class="forms" method="post">
+        <div class="form login">
+            <span class="title login">Search-bar</span>
+
+            <form method="post">
+            <div class="input-field">
+                <input type="text" placeholder="Enter a number between 0-99" name="number" required>
+                <i class="uil uil-list-ol-alt"></i>
+            </div>
+            <div class="input-field">
+                <input type="submit" class="Signup"></input>
+            </div>
+            {% with messages = get_flashed_messages()%}
+            {% if messages %}
+                {% for msg in messages %}
+                    <p style="color: black;" class="flashmsg">{{msg}}</p>
+                    <img style="width: 220px;
+                    height: 270px;
+                    margin-left: 85px;" src="static\meme.png" class="flashmsg">
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+{% endblock %}
