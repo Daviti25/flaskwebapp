@@ -68,7 +68,7 @@ def main_page():
         db.session.commit()
         query1 = Api.query.with_entities(Api.name).filter_by(img_num=index).first()
         query2 = Api.query.with_entities(Api.img_link).filter_by(img_num=index).first()
-        with open(r'C:\Users\datoa\OneDrive\Desktop\website.new\static\meme.png', 'wb') as file:
+        with open('static\meme.png', 'wb') as file:
          file.write(requests.get(query2[0]).content)
          file.close()
         flash(query1[0])
